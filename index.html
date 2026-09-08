@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دليل سياسات وتوجيهات مهندسي الأكاديمية - مسودة العرض على الإدارة</title>
+  
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+    /* Custom smooth scrolling and scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      .print-break-inside {
+        break-inside: avoid;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen antialiased flex flex-col">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm backdrop-blur-md bg-white/95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand & Title -->
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">لائحة وسياسات مهندسي الأكاديمية</h1>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200">
+                مسودة نقاش مع الـ CEO
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium">دليل المواقف التشغيلية • لائحة الجزاءات والخصومات • منظومة الحوافز والبونص</p>
+          </div>
+        </div>
+
+        <!-- Quick Action Buttons -->
+        <div class="flex items-center gap-2.5 no-print">
+          <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+            </svg>
+            طباعة / تصدير PDF
+          </button>
+          
+          <button onclick="openExecutiveSummaryModal()" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/25 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            ملخص العرض التنفيذي (CEO Memo)
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats & Sub-header Bar -->
+  <section class="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top banner alert -->
+      <div class="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-4 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 bg-indigo-600 text-white rounded-xl shadow-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">أداة العمل الجماعي ومراجعة السياسات</h3>
+            <p class="text-xs text-slate-600">يمكنك تحديد حالة كل بند (معتمد، يحتاج مراجعة، أو تعديل) وكتابة ملاحظات فورية أثناء الجلسة مع الـ CEO لحفظ التعديلات خطوة بخطوة.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-3 text-xs font-semibold">
+          <span class="flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            جاهز للاعتماد
+          </span>
+          <span class="text-slate-500">الإصدار 1.0</span>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-1 no-print">
+        <nav class="flex space-x-2 space-x-reverse" aria-label="Tabs">
+          
+          <button onclick="switchTab('playbook')" id="tab-btn-playbook" class="tab-btn inline-flex items-center gap-2 py-3 px-5 border-b-2 font-bold text-sm rounded-t-xl transition-all border-brand-600 text-brand-700 bg-brand-50/50">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+            <span>الجزء 1: دليل المواقف التشغيلية (Playbook)</span>
+            <span id="badge-playbook-count" class="ml-1.5 py-0.5 px-2 text-xs rounded-full bg-brand-100 text-brand-800 font-bold">14</span>
+          </button>
+
+          <button onclick="switchTab('penalties')" id="tab-btn-penalties" class="tab-btn inline-flex items-center gap-2 py-3 px-5 border-b-2 font-bold text-sm rounded-t-xl transition-all border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+            </svg>
+            <span>الجزء 2: لائحة الجزاءات والخصومات</span>
+            <span class="ml-1.5 py-0.5 px-2 text-xs rounded-full bg-rose-100 text-rose-800 font-bold">4 فئات</span>
+          </button>
+
+          <button onclick="switchTab('bonuses')" id="tab-btn-bonuses" class="tab-btn inline-flex items-center gap-2 py-3 px-5 border-b-2 font-bold text-sm rounded-t-xl transition-all border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>الجزء 3: نظام البونص والحوافز</span>
+            <span class="ml-1.5 py-0.5 px-2 text-xs rounded-full bg-emerald-100 text-emerald-800 font-bold">5 برامج</span>
+          </button>
+
+        </nav>
+
+        <!-- Search input -->
+        <div class="relative w-full sm:w-64">
+          <input type="text" id="searchInput" oninput="handleSearch()" placeholder="بحث سريع في السياسات..." class="w-full pl-3 pr-9 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 bg-white">
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+
+    <!-- ========================================================================= -->
+    <!-- TAB 1: OPERATIONAL PLAYBOOK (دليل التعامل والمواقف التشغيلية) -->
+    <!-- ========================================================================= -->
+    <div id="tab-content-playbook" class="tab-content space-y-8">
+      
+      <!-- Subcategory filters -->
+      <div class="flex flex-wrap items-center gap-2 no-print">
+        <span class="text-xs font-bold text-slate-500 ml-2">تصفية حسب التصنيف:</span>
+        <button onclick="filterCategory('all')" class="cat-pill active-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white shadow-sm" data-category="all">الكل</button>
+        <button onclick="filterCategory('tech')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100" data-category="tech">مشكلات تيمز والتقنية</button>
+        <button onclick="filterCategory('attendance')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100" data-category="attendance">الغياب والاعتذار والتأخير</button>
+        <button onclick="filterCategory('classroom')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100" data-category="classroom">إدارة الفصل وسلوك الطلاب</button>
+        <button onclick="filterCategory('parents')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100" data-category="parents">التواصل مع أولياء الأمور</button>
+      </div>
+
+      <!-- Playbook Cards Grid -->
+      <div id="playbookGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Playbook items injected by JavaScript -->
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 2: PENALTIES & DEDUCTIONS (لائحة الجزاءات والخصومات) -->
+    <!-- ========================================================================= -->
+    <div id="tab-content-penalties" class="tab-content hidden space-y-6">
+      
+      <!-- Principle Box -->
+      <div class="bg-gradient-to-r from-rose-50 to-amber-50 border border-rose-200/80 rounded-2xl p-5 shadow-sm">
+        <div class="flex items-start gap-4">
+          <div class="p-2.5 bg-rose-600 text-white rounded-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-base font-bold text-slate-900">المبادئ الحاكمة للائحة الجزاءات بالأكاديمية</h2>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              الهدف الأساسي من اللائحة ليس الخصم المادي، بل **ضمان الالتزام والحفاظ على تجربة الطلاب وجودة اسم الأكاديمية**. 
+              تعتمد اللائحة مبدأ <strong>التدرج في العقوبة</strong> (تنبيه شفوي/لفت نظر &larr; إنذار رسمي كتابي &larr; خصم مالي تصاعدي) لضمان الشفافية والعدل.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Penalties Matrix Cards -->
+      <div class="grid grid-cols-1 gap-6" id="penaltiesContainer">
+        <!-- Injected via JS -->
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 3: BONUSES & REWARDS (نظام المكافآت والحوافز) -->
+    <!-- ========================================================================= -->
+    <div id="tab-content-bonuses" class="tab-content hidden space-y-6">
+      
+      <!-- Bonus Hero Banner -->
+      <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-2xl p-6 shadow-md shadow-emerald-700/10">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-white/20 text-white mb-1">
+              ثقافة التقدير والتحفيز المستمر
+            </span>
+            <h2 class="text-xl font-black">منظومة الحوافز ومكافآت التميز الأكاديمي</h2>
+            <p class="text-xs text-emerald-100 max-w-2xl leading-relaxed">
+              صُممت هذه المنظومة لربط نجاح المهندس المالي بنمو الأكاديمية ورضا الطلاب وأولياء الأمور؛ من يحافظ على طلابه ويقدم قيمة استثنائية يحصل على عائد مجزٍ ومباشر.
+            </p>
+          </div>
+          <div class="text-left bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/20">
+            <div class="text-xs text-emerald-100">دورية الصرف</div>
+            <div class="text-sm font-black">شهرياً مع الراتب الأساسي</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonus Programs Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="bonusContainer">
+        <!-- Injected via JS -->
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Executive Memo Modal -->
+  <div id="memoModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200 animate-in fade-in zoom-in duration-200">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-sm">
+            CEO
+          </div>
+          <div>
+            <h3 class="text-base font-extrabold text-slate-900">مذكرة العرض المقترحة على الـ CEO</h3>
+            <p class="text-xs text-slate-500">خلاصة ونقاط القرار لاعتماد السياسات</p>
+          </div>
+        </div>
+        <button onclick="closeExecutiveSummaryModal()" class="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <div class="bg-amber-50 border-r-4 border-amber-500 p-3 rounded-lg text-amber-900">
+          <p class="font-bold mb-1">الهدف الاستراتيجي من هذه الوثيقة:</p>
+          <p>تحويل إدارة الجلسات التعليمية من اجتهادات فردية إلى معايير تشغيلية قياسية (SOPs) تحمي سمعة الأكاديمية وتضمن استدامة اشتراكات الطلاب وتقليل شكاوى أولياء الأمور بنسبة تفوق 70%.</p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-extrabold text-slate-900 text-sm border-b pb-1">أبرز القرارات المطلوبة من الـ CEO في جلسة المراجعة:</h4>
+          
+          <div class="flex items-start gap-2">
+            <span class="text-brand-600 font-bold">١.</span>
+            <div><strong>تحديد النطاقات المالية للخصم:</strong> اعتماد هل الخصومات تكون كنسبة مئوية من قيمة السيشن (مثلاً: 25% / 50% / 100%) أو بمبالغ مقطوعة ثابتة لسهولة الحساب.</div>
+          </div>
+          
+          <div class="flex items-start gap-2">
+            <span class="text-brand-600 font-bold">٢.</span>
+            <div><strong>إلزامية تسجيل الحصص (Recording Mandate):</strong> اعتماد بند الخصم الفوري في حالة تكرار نسيان التسجيل، نظراً لأن تسجيل السيشن هو الضمان الوحيد للطلاب المتغيبين ولتقييم جودة الحصة.</div>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <span class="text-brand-600 font-bold">٣.</span>
+            <div><strong>بونص التجديد (Retention Bonus):</strong> تحديد النسبة المئوية أو المكافأة لكل مهندس عند تجديد طلاب المجموعة بالكامل للمستوى التالي (يوصى بـ 5% إلى 10% من قيمة اشتراك الجروب).</div>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <span class="text-brand-600 font-bold">٤.</span>
+            <div><strong>مهلة الاعتذار المقبولة:</strong> إقرار مهلة الـ 6 ساعات كحد أدنى لأي اعتذار طارئ لإتاحة فرصة توفير بديل مناسب من المهندسين دون إزعاج أولياء الأمور.</div>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 p-3 rounded-xl flex items-center justify-between text-xs">
+          <span class="font-medium text-slate-600">حالة مسودة المراجعة الحالية:</span>
+          <span class="font-bold text-indigo-700" id="memoReviewSummary">تم تحديد الحالات للمراجعة المباشرة</span>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-3 border-t border-slate-200 bg-slate-50 flex items-center justify-between">
+        <button onclick="copyExecutiveMemo()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-200 hover:bg-slate-300 text-slate-800 transition">
+          <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+          </svg>
+          نسخ نص المذكرة
+        </button>
+        <button onclick="closeExecutiveSummaryModal()" class="px-4 py-1.5 rounded-lg text-xs font-bold bg-brand-600 hover:bg-brand-700 text-white transition">
+          إغلاق
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 left-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2 text-xs font-bold">
+    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+    </svg>
+    <span id="toastMessage">تمت العملية بنجاح</span>
+  </div>
+
+  <script>
+    // Master data for the Operational Playbook (Original points + Crucial industry additions)
+    const playbookData = [
+      {
+        id: 'pb-1',
+        title: 'غياب جميع الطلاب عن موعد السيشن',
+        originalQuery: 'هو أنا المفروض أقعد قد إيه لو محدش دخل وألغي؟',
+        category: 'attendance',
+        categoryLabel: 'الغياب والمواعيد',
+        urgency: 'عالي',
+        actionSteps: [
+          'يجب الانتظار لمدة 20 دقيقة كاملة داخل الغرفة قبل المغادرة.',
+          'في الدقيقة (5): إرسال منشن تذكيري أول على جروب الطلاب/الأهالي برابط الحصة.',
+          'في الدقيقة (10): إرسال منشن ثانٍ مع تنويه خدمة العملاء على الشات الداخلي للمتابعة هاتفياً.',
+          'في الدقيقة (20): أخذ لقطة شاشة (Screenshot) توضح الشاشة والوقت وقائمة الحضور الفارغة كإثبات رسمي لخدمة العملاء، ثم إنهاء المكالمة.',
+          'لا تقم بإلغاء السيشن من تلقاء نفسك نهائياً إلا بعد توثيق الخطوات السابقة وإخطار الإدارة.'
+        ],
+        goldenTip: 'توثيق الـ Screenshot يحميك من أي ادعاء بأنك لم تتواجد في موعد الحصة.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-2',
+        title: 'اختفاء أو تعذر العثور على تسجيل المحاضرة (Recording)',
+        originalQuery: 'كان عندي سيشن من شوية وسجلت المحاضرة وبعد ما خلصت ملقتهاش!!',
+        category: 'tech',
+        categoryLabel: 'مشكلات تقنية وتيمز',
+        urgency: 'متوسط',
+        actionSteps: [
+          'التأكد أولاً من أنك قمت بضغط زر Start Recording بالفعل ولم تكن مجرد نية.',
+          'التحقق من أنك فتحت السيشن وسجلت في القناة والجروب المظبوط وليس جروباً آخر عن طريق الخطأ.',
+          'الانتظار لمدة 30 إلى 45 دقيقة كاملة بعد انتهاء الاجتماع؛ لأن مايكروسوفت تيمز يستغرق وقتاً لمعالجة الفيديو ورفعه على السيرفرات خاصة في الحصص الطويلة.',
+          'في حال مرور ساعة كاملة دون ظهور التسجيل، مراجعة مجلد OneDrive المرتبط بالحساب، وفي حال الفقدان النهائي يتم التواصل مع المشرف التقني فوراً لجدولة حل بديل.'
+        ],
+        goldenTip: 'اجعل أول حركة لك بعد بدء الاجتماع بثانية واحدة هي تفعيل الريكورد وقول "بسم الله نبدأ التسجيل" لتتذكر دائماً.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-3',
+        title: 'برنامج Teams يرفض بدء أو فتح السيشن',
+        originalQuery: 'عندي سيشن دلوقتي والـ Teams مش راضي يبدأ سيشن!!',
+        category: 'tech',
+        categoryLabel: 'مشكلات تقنية وتيمز',
+        urgency: 'حرج',
+        actionSteps: [
+          'إغلاق البرنامج إجبارياً (Task Manager / Force Quit) وإعادة تشغيله مجدداً.',
+          'إذا استمر العطل: عمل إعادة تشغيل كاملة للراوتر والكمبيوتر (Restart).',
+          'الحل السريع الفوري: فتح Teams من متصفح الويب (Web Browser) بدلاً من التطبيق المكتبي لعدم تأخير الطلاب.',
+          'إرسال رسالة سريعة للجروب ولخدمة العملاء: "جاري الدخول خلال 3 دقائق لتحديث تقني" لطمأنة الطلاب.'
+        ],
+        goldenTip: 'احرص دائماً على فتح تيمز والتأكد من استقراره قبل موعد الحصة بـ 10 دقائق على الأقل.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-4',
+        title: 'عدم ظهور خيار التحكم عن بُعد (Give/Take Control)',
+        originalQuery: 'مش بيظهر أوبشن إني آخد الكنترول من الأولاد في السيشن!!',
+        category: 'tech',
+        categoryLabel: 'مشكلات تقنية وتيمز',
+        urgency: 'متوسط',
+        actionSteps: [
+          'التأكد بنسبة 100% أن الطالب يستخدم تطبيق Teams المكتبي المثبت على الجهاز وليس متصفح الإنترنت (Browser)، حيث أن المتصفح لا يدعم مشاركة التحكم.',
+          'التأكد من أن المهندس أيضاً يستخدم تطبيق سطح المكتب.',
+          'في حال استخدام تطبيق المتصفح أو جهاز لوحي: توجيه الطالب شفهياً خطوة بخطوة مع استخدام ميزة التظليل (Spotlight) أو جعل الطالب يشارك الشاشة بالكامل (Entire Screen وليس Window فقط).'
+        ],
+        goldenTip: 'تنبيه أولياء الأمور قبل بداية الكورس بضرورة تنصيب تطبيق Teams الرسمي على أجهزة الطلاب.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-5',
+        title: 'طالب متغيب لعدة حصص متتالية ودخل غير مستوعب لما فاته',
+        originalQuery: 'طفل كان متغيب ودخل بعد كام سيشن ومش مذاكر اللي فات؟',
+        category: 'classroom',
+        categoryLabel: 'إدارة الفصل والطلاب',
+        urgency: 'عالي',
+        actionSteps: [
+          'استقبال الطالب بترحاب واحتواء دون إشعاره بالإحراج أو التقريع أمام زملائه.',
+          'عدم تعطيل الجروب بالكامل لإعادة شرح الحصص السابقة، بل تكليفه بالتطبيق معنا في الجزء الحالي قدر الإمكان مع تبسيط المفاهيم له.',
+          'توجيهه لمشاهدة التسجيلات السابقة مع طمأنته بأنك متاح للإجابة عن أي استفسار يرسله على الجروب.',
+          'إخطار خدمة العملاء عقب السيشن مباشرة للتواصل مع ولي الأمر والتنسيق لعمل جلسة تعويضية (Catch-up Session) فردية إذا كانت الفجوة كبيرة.'
+        ],
+        goldenTip: 'لا تجعل الطالب الغائب يشعر بالعزلة، واحرص على عدم التضحية بوقت باقي الطلاب الحاضرين.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-6',
+        title: 'إلغاء الحصة في حال اعتذار جميع الطلاب دون الرجوع للإدارة',
+        originalQuery: 'إني ألغي حصة عشان كل الطلاب عندهم ظروف ومش هيقدروا يحضروا دا عادي بدون الرجوع لخدمة العملاء؟',
+        category: 'attendance',
+        categoryLabel: 'الغياب والمواعيد',
+        urgency: 'حرج',
+        actionSteps: [
+          'ممنوع منعاً باتاً إلغاء الحصة دون إعلام خدمة العملاء والإدارة مسبقاً وتوثيق اعتذارات أولياء الأمور.',
+          'إذا اعتذر جميع الطلاب على الجروب رسمياً، قم بإرسال تنبيه فوري لخدمة العملاء للتأكيد وإعادة جدولة الحصة رسمياً في النظام.',
+          'القاعدة الذهبية: إذا حضر حتى "طالب واحد فقط"، تبدأ السيشن في موعدها وتُشرح بالكامل وتسجل لباقي الطلاب الذين تعذر حضورهم.',
+          'الهدف هو الحفاظ على مصداقية الأكاديمية أمام الطالب الحاضر الملتزم.'
+        ],
+        goldenTip: 'حضور طالب واحد كافٍ لعقد الحصة كاملة دون تردد أو تفاوض.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-7',
+        title: 'طلب تأجيل موعد السيشن في نفس اليوم',
+        originalQuery: 'هل متاح تأجيل ميعاد في يوم؟',
+        category: 'attendance',
+        categoryLabel: 'الغياب والمواعيد',
+        urgency: 'متوسط',
+        actionSteps: [
+          'التأجيل في نفس اليوم ليس خياراً متاحاً دائماً، ولا يتم بقرار فردي بين المهندس والطلاب.',
+          'يجب الرجوع لخدمة العملاء والإدارة الأكاديمية للتأكد من عدم تعارض جدول القاعات والمهندسين وجداول باقي أولياء الأمور.',
+          'إذا حدث إجماع كتابي من أولياء الأمور ووافقت خدمة العملاء، يتم اعتماد الموعد البديل في سجل الحصص.'
+        ],
+        goldenTip: 'التغييرات اللحظية في المواعيد تفقد الأكاديمية طابع الالتزام، لذا تجنبها إلا للضرورة القصوى.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-8',
+        title: 'اعتذار المهندس عن السيشن لظرف طارئ',
+        originalQuery: 'مش هقدر أدخل السيشن اليوم متاح تتلغي؟',
+        category: 'attendance',
+        categoryLabel: 'الغياب والمواعيد',
+        urgency: 'حرج جداً',
+        actionSteps: [
+          'الاعتذار ليس الخيار الأول، ولكن في الظروف القهرية يجب إبلاغ الإدارة والعمليات قبل موعد السيشن بـ 6 ساعات على الأقل (وليس قبلها بنصف ساعة).',
+          'تقوم الإدارة فوراً بتوفير مهندس بديل (Cover Instructor) للحفاظ على موعد الطلاب ومنع الإلغاء الذي يسبب استياء أولياء الأمور.',
+          'تزويد المهندس البديل بملخص أين توقفت المجموعة وما هو الدرس المقرر لتكون التجربة متصلة.',
+          'الاعتذارات المتكررة غير المبررة تؤثر مباشرة على تقييم المهندس وحجم ساعاته الأسبوعية.'
+        ],
+        goldenTip: 'الالتزام بمواعيد الطلاب هو حجر الأساس في سمعة المهندس ومرتبه.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-9',
+        title: 'انقطاع الإنترنت أو التيار الكهربائي فجأة أثناء الحصة',
+        originalQuery: 'النت أو الكهرباء قطعت فجأة وأنا وسط الشرح!!',
+        category: 'tech',
+        categoryLabel: 'مشكلات تقنية وتيمز',
+        urgency: 'حرج جداً',
+        actionSteps: [
+          'فوراً خلال دقيقتين: فتح باقة الموبايل وإرسال رسالة سريعة على جروب الطلاب وقناة العمليات الداخلية للإبلاغ بالعطل الطارئ وجارٍ العودة.',
+          'محاولة التبديل لنقطة اتصال الهاتف (Mobile Hotspot) لاستكمال الحصة.',
+          'إذا تعذر عودة الكهرباء أو النت لأكثر من 15 دقيقة: يتم إخطار الطلاب بلباقة برفع التسجيل حتى نقطة التوقف، والتنسيق فوراً مع خدمة العملاء لتعويض الدقائق المتبقية في بداية السيشن القادمة أو بموعد تعويضي.'
+        ],
+        goldenTip: 'جهز دائماً باقة هاتف مشحونة للطوارئ (Emergency Backup) لتكون على أهبة الاستعداد.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-10',
+        title: 'طالب مشاغب، يقاطع الشرح، يفتح المايك بصوت مزعج، أو يرسم على الشاشة',
+        originalQuery: 'طالب بيشاغب ويرسم على الشاشة ومشتت زمايله جداً!!',
+        category: 'classroom',
+        categoryLabel: 'إدارة الفصل والطلاب',
+        urgency: 'عالي',
+        actionSteps: [
+          'استخدام صلاحيات المنظم (Meeting Options): إلغاء تفعيل خاصية الـ Annotation للطلاب لمنع الرسم، وكتم المايك العام (Mute All).',
+          'التحدث مع الطالب بهدوء وحزم وبشكل فردي دون إهانته: "يا بطل، أنا متأكد إنك هتركز معايا دلوقتي عشان ورانا تحدي قوي".',
+          'إذا تكرر التعطيل العمدي: نقله لغرفة الانتظار (Move to Lobby) لمدة 3 دقائق لتهدئة الموقف ثم إعادته بعد تنبيهه.',
+          'توثيق الواقعة بعد انتهاء الحصة وإبلاغ خدمة العملاء للتواصل الودي والتربوي مع ولي أمره لمنع تكرار الأمر.'
+        ],
+        goldenTip: 'لا تنفعل أبداً ولا ترفع صوتك؛ أنت قائد الجلسة واستخدام أدوات التحكم الرقمية أفضل من الجدال.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-11',
+        title: 'تفاوت كبير في المستوى والسرعة بين طلاب المجموعة الواحدة',
+        originalQuery: 'طالب بيخلص في دقيقة وطالب تاني مش فاهم الأساسيات خالص!!',
+        category: 'classroom',
+        categoryLabel: 'إدارة الفصل والطلاب',
+        urgency: 'متوسط',
+        actionSteps: [
+          'تجهيز "تحدي إضافي متقدم (Bonus / Extra Challenge)" مسبقاً لكل حصة لتكليف الطالب المتقدم به ليشغله بإبداع ولا يشعر بالملل.',
+          'استغلال هذا الوقت للتركيز مع الطالب الأبطأ وتقديم توجيه مباشر له ومساعدته دون إشعاره بالنقص.',
+          'استخدام أسلوب التعلّم بالأقران (Peer Learning): جعل الطالب المتميز يشرح جزءاً بسيطاً لزميله أو يشاركه الحل لتعزيز روح الفريق.',
+          'إذا كانت الفجوة مستحيلة المعالجة، إبلاغ الإدارة لاقتراح نقل الطالب لمجموعة أكثر ملائمة لمستواه.'
+        ],
+        goldenTip: 'تفريد التعليم وإعطاء تحديات متفاوتة الصعوبة يبقي كل الطلاب في حالة تركيز وشغف.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-12',
+        title: 'مقاطعة ولي الأمر للمهندس أثناء سير الحصة لمناقشة ابنه',
+        originalQuery: 'ولي الأمر فتح المايك وقاطعني وأنا بشرح عشان يسأل عن مستوى ابنه!!',
+        category: 'parents',
+        categoryLabel: 'التواصل مع أولياء الأمور',
+        urgency: 'عالي',
+        actionSteps: [
+          'الرد بلباقة فائقة وابتسامة مهنية دون توتر: "أهلاً بحضرتك يا فندم، أنا تحت أمرك تماماً، لكن حفاظاً على تركيز ووقت تدريب الطلاب، سأكون متاحاً للتحدث مع حضرتك فور انتهاء الحصة أو عبر الشات الخاص بخدمة العملاء".',
+          'ممنوع فتح نقاشات فرعية أو تلقي ملاحظات نقدية أو خلافات على الملأ أمام الأطفال.',
+          'في حال أصر ولي الأمر على المقاطعة غير اللائقة، استئذانه وإخطار خدمة العملاء هاتفياً ليتدخلوا فوراً بالتواصل معه وتوضيح السياسة.'
+        ],
+        goldenTip: 'الاحترام والهدوء الحازم يفرضان هيبة المهندس والمؤسسة في آن واحد.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-13',
+        title: 'رفض الطالب فتح الكاميرا أو المشاركة في التطبيق العملي',
+        originalQuery: 'طالب قافل الكاميرا وساكت خالص ومش راضي يطبق معايا!',
+        category: 'classroom',
+        categoryLabel: 'إدارة الفصل والطلاب',
+        urgency: 'متوسط',
+        actionSteps: [
+          'عدم إجباره بشكل عنيف، بل استخدام أسلوب المحاكاة والتشجيع بذكر اسمه بأسلوب لطيف وسؤاله أسئلة سريعة لا تحتمل الإحراج.',
+          'الطلب منه مشاركة شاشته لنرى رسمته أو الكود الخاص به والتصفيق له ودعوة زملائه لتحيته.',
+          'إذا كانت هناك أسباب اجتماعية أو خجل يمنع فتح الكاميرا، يتم احترام ذلك مؤقتاً بشرط المشاركة بالصوت والتطبيق العملي ومشاركة الشاشة.',
+          'تسجيل ذلك في تقرير الجلسة ليتابع المشرف التربوي حالة الطالب.'
+        ],
+        goldenTip: 'التشجيع الإيجابي والمدح المخصص للطالب يكسران حاجز الخجل أسرع من الأوامر المباشرة.',
+        status: 'approved',
+        notes: ''
+      },
+      {
+        id: 'pb-14',
+        title: 'انتهاء وقت الحصة قبل إكمال الشرح المقرّر',
+        originalQuery: 'الوقت خلص والدرس لسه مخلصش وورايا سيشن تانية أو الطلاب عندهم معاد!',
+        category: 'attendance',
+        categoryLabel: 'الغياب والمواعيد',
+        urgency: 'متوسط',
+        actionSteps: [
+          'لا تقم بإنهاء السيشن فجأة ودون تلخيص.',
+          'لا تتجاوز موعد الحصة بأكثر من 10 دقائق احتراماً لمواعيد الطلاب ولأن المهندس غالباً لديه سيشن تالية.',
+          'التوقف عند نقطة منطقية متكاملة، وإخبار الطلاب: "إلى هنا نكون قد حققنا الهدف الأول، والجزء القادم سنبدأ به بتطبيق عملي ممتع السيشن القادمة".',
+          'تسجيل فيديو قصير مدته 3 إلى 5 دقائق لشرح الجزئية المتبقية ورفعه على الجروب كهدية دعم إذا استدعى الأمر.'
+        ],
+        goldenTip: 'إدارة الوقت داخل الحصة مهارة أساسية (Time Management)، قسم الحصة: 10 دق مراجعة، 30 دق شرح وتطبيق، 15 دق تحديات، 5 دق تلخيص.',
+        status: 'approved',
+        notes: ''
+      }
+    ];
+
+    // Master data for Penalties & Deductions
+    const penaltiesData = [
+      {
+        category: 'الحضور والالتزام بالمواعيد الرسمية',
+        icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+        color: 'rose',
+        items: [
+          {
+            violation: 'التأخر عن موعد بداية السيشن من (5 إلى 15 دقيقة) دون إخطار مسبق',
+            firstTime: 'تنبيه ودي ولفت نظر شفهي مع الالتزام بتعويض الوقت',
+            secondTime: 'إنذار كتابي رسمي من الإدارة الأكاديمية',
+            repeated: 'خصم 25% من قيمة أجر السيشن مع التزام المهندس بتعويض الوقت كاملاً',
+            notes: 'يجب الدخول قبل السيشن بـ 5 دقائق لاختبار المايك وتجهيز الملفات.'
+          },
+          {
+            violation: 'التأخر أكثر من 15 دقيقة عن موعد الحصة',
+            firstTime: 'إنذار كتابي رسمي وتوبيخ إداري',
+            secondTime: 'خصم 50% من قيمة الحصة وتكليف بتعويض كامل الوقت',
+            repeated: 'خصم أجر الحصة بالكامل وتحويل المجموعة لمهندس آخر',
+            notes: 'يؤدي إلى استياء شديد من أولياء الأمور ويخل بجدول الطلاب.'
+          },
+          {
+            violation: 'الغياب التام عن السيشن دون أي إخطار مسبق (No-Show)',
+            firstTime: 'خصم قيمة الحصة كاملة + خصم 50% إضافية من أجر حصة أخرى كتعويض لسمعة الأكاديمية',
+            secondTime: 'خصم مضاعف وتجميد إسناد أي مجموعات جديدة',
+            repeated: 'إنهاء التعاقد الفوري مع المهندس وتحميله التبعات الإدارية',
+            notes: 'تعتبر أكبر مخالفة تشغيلية بالأكاديمية لأنها تدمر الثقة مع أولياء الأمور.'
+          },
+          {
+            violation: 'الاعتذار المفاجئ قبل السيشن بأقل من 6 ساعات لغير الأعذار القهرية المثبتة',
+            firstTime: 'لفت نظر رسمي وإلزام بتجهيز محتوى للمهندس البديل',
+            secondTime: 'خصم 25% من أجر الحصة المعتذر عنها',
+            repeated: 'خصم 50% من أجر الحصة وسحب أولوية المجموعات المتميزة',
+            notes: 'الهدف إتاحة وقت كافٍ لقسم العمليات لتوفير بديل كفء دون إلغاء الحصة.'
+          }
+        ]
+      },
+      {
+        category: 'الجودة الفنية والتقنية (Quality & Recordings)',
+        icon: 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z',
+        color: 'amber',
+        items: [
+          {
+            violation: 'نسيان تسجيل المحاضرة (Recording) أو عدم رفعه/إتاحته للطلاب',
+            firstTime: 'تنبيه شفهي وطلب إرسال ملخص كتابي للدرس للطلاب',
+            secondTime: 'إنذار كتابي رسمي',
+            repeated: 'خصم 20% من أجر الحصة المعنية إذا اشتكى أولياء الأمور من غياب الريكورد',
+            notes: 'التسجيل هو المرجع الأساسي للمراجعة والطلاب الغائبين ولا تهاون فيه.'
+          },
+          {
+            violation: 'إعطاء السيشن من بيئة غير مناسبة (ضوضاء شديدة، مايك سيء، أطفال بالجوار)',
+            firstTime: 'لفت نظر فوري مع مراجعة المعدات التقنية للمهندس',
+            secondTime: 'إنذار رسمي ومهلة 48 ساعة لتعديل بيئة العمل أو استبدال المايك',
+            repeated: 'إيقاف المهندس عن إعطاء الحصص حتى فحص بيئة العمل واعتمادها تقنياً',
+            notes: 'بيئة الصوت الهادئة جزء لا يتجزأ من هوية واحترافية الأكاديمية.'
+          }
+        ]
+      },
+      {
+        category: 'متابعة الطلاب والتقييمات والتاسكات (Homework & Feedback)',
+        icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
+        color: 'indigo',
+        items: [
+          {
+            violation: 'تجاهل تصحيح ومراجعة تاسكات ومشاريع الطلاب لأكثر من أسبوعين',
+            firstTime: 'تذكير من المشرف الأكاديمي بضرورة إرسال الفيدباك',
+            secondTime: 'إنذار رسمي مع إلزام بإرسال تقارير مفصلة خلال 24 ساعة',
+            repeated: 'خصم 15% من المكافأة الشهرية للمجموعة لضعف المتابعة',
+            notes: 'ولي الأمر يدفع المقابل من أجل رؤية تطور ابنه ومتابعة تاسكاته بانتظام.'
+          },
+          {
+            violation: 'إنهاء السيشن قبل موعدها المحدد (بأكثر من 10 دقائق) دون استيفاء الشرح',
+            firstTime: 'لفت نظر ومراجعة خطة الدرس مع المشرف الأكاديمي',
+            secondTime: 'خصم نسبي يوازي وقت الحصة المتبقي الذي لم يتم إعطاؤه',
+            repeated: 'خصم 50% من أجر السيشن وإحالة الجروب للمتابعة الدقيقة',
+            notes: 'وقت الحصة مدفوع بالكامل من ولي الأمر ويجب استثماره في التطبيق والتحديات.'
+          }
+        ]
+      },
+      {
+        category: 'السلوك المهني والسرية وحماية الطلاب',
+        icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+        color: 'red',
+        items: [
+          {
+            violation: 'الانفعال، التنمر، أو التحدث بأسلوب غير لائق تربوياً مع أي طالب',
+            firstTime: 'تحقيق فوري، إنذار كتابي شديد اللهجة، واعتذار رسمي لولي الأمر',
+            secondTime: 'خصم 50% من مستحقات الشهر مع سحب المجموعة فوراً',
+            repeated: 'الفصل النهائي من الأكاديمية وإدراجه بالقائمة السوداء',
+            notes: 'الأمان النفسي للطفل خط أحمر مطلق في سياسة عمل الأكاديمية.'
+          },
+          {
+            violation: 'تبادل أرقام شخصية أو فتح قنوات تواصل فردية خارج إشراف الأكاديمية',
+            firstTime: 'إنذار رسمي وطلب نقل كل المحادثات لقنوات الأكاديمية فوراً',
+            secondTime: 'خصم 100% من أجر الشهر للمجموعة المعنية لخرق سياسة السرية',
+            repeated: 'إنهاء التعاقد فوراً مع اتخاذ الإجراءات القانونية لحماية العملاء',
+            notes: 'جميع الاتصالات تتم حصرياً عبر قنوات وفرق عمل الأكاديمية الرسمية.'
+          }
+        ]
+      }
+    ];
+
+    // Master data for Bonuses & Incentives
+    const bonusesData = [
+      {
+        id: 'bonus-1',
+        title: 'بونص استدامة وتجديد الاشتراكات (Retention & Renewal Bonus)',
+        badge: 'الأعلى قيمة',
+        badgeColor: 'bg-amber-100 text-amber-800 border-amber-200',
+        summary: 'مكافأة مالية مباشرة ترتبط بنسبة الطلاب الذين يجددون اشتراكهم للمستوى القادم مع نفس المهندس.',
+        target: 'تحقيق نسبة تجديد 85% فأكثر من إجمالي طلاب المجموعة للمستوى التالي.',
+        reward: 'بونص مالي يُقدر بنسبة (7% إلى 10%) من إجمالي عوائد تجديد المجموعة، أو مبلغ مقطوع محدد لكل طالب مجدد.',
+        metric: 'تقارير قسم المبيعات وخدمة العملاء عند نهاية كل كورس.',
+        notes: 'المهندس الذي يحافظ على طلابه يوفر تكلفة استقطاب طلاب جدد ويستحق هذه النسبة تقديراً لجهده.'
+      },
+      {
+        id: 'bonus-2',
+        title: 'بونص الالتزام الذهبي (Zero-Absence & 100% Commitment)',
+        badge: 'شهري منتظم',
+        badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+        summary: 'مكافأة للمهندس الملتزم الذي يظهر انضباطاً كاملاً طوال الشهر بدون أدنى خطأ تشغيلي.',
+        target: 'حضور 100% من الجلسات بدون أي تأخير، بدون أي اعتذارات مفاجئة، وبدون أي شكاوى تسجيل.',
+        reward: 'مكافأة شهرية ثابتة تُضاف للراتب الأساسي (تحدد قيمتها مثلاً بـ 500 إلى 1000 جنيه شهرياً أو ما يعادلها).',
+        metric: 'سجلات تيمز وتقارير العمليات الأكاديمية.',
+        notes: 'تشجيع ثقافة الانضباط التام وتقدير المهندسين الذين يعتمد عليهم الفريق في كل وقت.'
+      },
+      {
+        id: 'bonus-3',
+        title: 'حافز تقييمات أولياء الأمور ورضا العملاء (Parent NPS Stars)',
+        badge: 'ربع سنوي',
+        badgeColor: 'bg-blue-100 text-blue-800 border-blue-200',
+        summary: 'تكريم المهندسين الأعلى تقييماً في استبيانات رضا أولياء الأمور التي تجريها الأكاديمية دورياً.',
+        target: 'الحصول على متوسط تقييم 4.8 / 5 أو أعلى في استطلاعات الرأي (Surveys) ورسائل الشكر الموثقة.',
+        reward: 'شهادة تميز رسمية + مكافأة نقدية ربع سنوية + أولوية الحصول على المجموعات الخاصة والـ VIP.',
+        metric: 'استطلاعات الرأي التي يرسلها فريق الجودة لأولياء الأمور شهرياً.',
+        notes: 'الكلمة الطيبة من ولي الأمر هي أفضل إعلان عن الأكاديمية ويجب مكافأة صانعها.'
+      },
+      {
+        id: 'bonus-4',
+        title: 'مكافأة المشاريع الإبداعية ومعارض الطلاب (Showcase & Innovation)',
+        badge: 'لكل إنجاز',
+        badgeColor: 'bg-purple-100 text-purple-800 border-purple-200',
+        summary: 'حافز يُمنح عند إنتاج طلاب المهندس مشاريع برمجية أو هندسية استثنائية قابلة للعرض العام.',
+        target: 'تسليم 100% من مشاريع التخرج للمجموعة بجودة عالية، وترشيح مشاريع للمنافسات والمسابقات أو السوشيال ميديا.',
+        reward: 'مكافأة مشروع لكل مجموعة متميزة + تسليط الضوء على اسم المهندس كمدرب ملهم في منصات الأكاديمية.',
+        metric: 'لجنة التحكيم الداخلي للمشاريع ونسبة تسليم الطلاب.',
+        notes: 'مشاريع الطلاب هي الدليل الواقعي لولي الأمر على نجاح التجربة التعليمية.'
+      },
+      {
+        id: 'bonus-5',
+        title: 'بونص التطوير والمبادرة الاستثنائية (Academy Builder Bonus)',
+        badge: 'مبادرات إضافية',
+        badgeColor: 'bg-indigo-100 text-indigo-800 border-indigo-200',
+        summary: 'مكافأة للمهندس الذي يساهم في تحسين مناهج الأكاديمية أو تقديم سيشنز تعويضية استثنائية أو تدريب زملائه الجدد.',
+        target: 'اقتراح تعديل منهجي معتمد، أو إنقاذ مجموعة متعثرة بعد اعتذار مفاجئ لمهندس آخر.',
+        reward: 'مكافأة فورية مقطوعة عن كل مهمة إضافية تساهم في حل المشكلات التشغيلية.',
+        metric: 'اعتماد الإدارة التنفيذية ورئيس القسم الأكاديمي.',
+        notes: 'روح المبادرة وخدمة روح الفريق تجعل المهندس شريكاً حقيقياً في نمو الشركة.'
+      }
+    ];
+
+    // Local state for interactive reviews
+    let userReviewState = {};
+  </script>
+
+  <script>
+    // Tab Switching Function
+    function switchTab(tabKey) {
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-brand-600', 'text-brand-700', 'bg-brand-50/50');
+        btn.classList.add('border-transparent', 'text-slate-500');
+      });
+
+      const activeContent = document.getElementById(`tab-content-${tabKey}`);
+      const activeBtn = document.getElementById(`tab-btn-${tabKey}`);
+
+      if (activeContent) activeContent.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.remove('border-transparent', 'text-slate-500');
+        activeBtn.classList.add('border-brand-600', 'text-brand-700', 'bg-brand-50/50');
+      }
+    }
+
+    // Render Playbook Cards
+    function renderPlaybook(items) {
+      const container = document.getElementById('playbookGrid');
+      if (!container) return;
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-slate-200 p-8">
+            <svg class="w-12 h-12 mx-auto text-slate-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-sm font-bold text-slate-600">لم يتم العثور على مواقف تطابق البحث</p>
+            <p class="text-xs text-slate-400 mt-1">جرّب كلمات بحث أخرى أو اختر فئة مختلفة</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = items.map((item, idx) => {
+        const savedStatus = userReviewState[item.id]?.status || 'approved';
+        const savedNotes = userReviewState[item.id]?.notes || '';
+
+        const statusBadge = {
+          approved: '<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">معتمد للنقاش</span>',
+          needs_edit: '<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200">يحتاج تعديل صيغة</span>',
+          discuss_ceo: '<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200">نقطة نقاش مع الـ CEO</span>'
+        }[savedStatus];
+
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between print-break-inside" id="card-${item.id}">
+            <div>
+              <!-- Header tag & category -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-black text-brand-600 bg-brand-50 px-2.5 py-1 rounded-lg">#${idx + 1}</span>
+                  <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">${item.categoryLabel}</span>
+                </div>
+                <div id="status-badge-${item.id}">${statusBadge}</div>
+              </div>
+
+              <!-- Main Title & User Query -->
+              <h3 class="text-base font-extrabold text-slate-900 mb-1 leading-snug">${item.title}</h3>
+              
+              <div class="bg-slate-50 border-r-4 border-slate-400 p-2.5 rounded-lg mb-4">
+                <span class="text-[11px] font-bold text-slate-500 block mb-0.5">سؤال/موقف المهندس الشائع:</span>
+                <p class="text-xs font-medium text-slate-700 italic">"${item.originalQuery}"</p>
+              </div>
+
+              <!-- Action Steps -->
+              <div class="space-y-2 mb-4">
+                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                  </svg>
+                  بروتوكول التصرف القياسي (Action Protocol):
+                </span>
+                <ul class="text-xs text-slate-600 space-y-1.5 pr-2">
+                  ${item.actionSteps.map(step => `
+                    <li class="flex items-start gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 flex-shrink-0"></span>
+                      <span>${step}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+
+              <!-- Golden Tip -->
+              <div class="bg-emerald-50/80 border border-emerald-200/70 rounded-xl p-3 mb-4 text-xs text-emerald-900 flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <div>
+                  <strong class="font-bold">القاعدة الذهبية:</strong> ${item.goldenTip}
+                </div>
+              </div>
+            </div>
+
+            <!-- Review Actions & Notes (Interactive bottom bar) -->
+            <div class="border-t border-slate-100 pt-3 mt-2 no-print">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                
+                <!-- Status selector -->
+                <div class="flex items-center gap-1 text-xs">
+                  <span class="text-slate-400 text-[11px]">الحالة:</span>
+                  <select onchange="updateItemStatus('${item.id}', this.value)" class="text-xs border border-slate-200 rounded-lg px-2 py-1 bg-white font-medium focus:ring-1 focus:ring-brand-500">
+                    <option value="approved" ${savedStatus === 'approved' ? 'selected' : ''}>معتمد</option>
+                    <option value="needs_edit" ${savedStatus === 'needs_edit' ? 'selected' : ''}>تعديل صيغة</option>
+                    <option value="discuss_ceo" ${savedStatus === 'discuss_ceo' ? 'selected' : ''}>نقاش مع CEO</option>
+                  </select>
+                </div>
+
+                <!-- Live Note Trigger -->
+                <button onclick="toggleNoteBox('${item.id}')" class="text-xs text-slate-500 hover:text-brand-600 font-semibold inline-flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                  </svg>
+                  <span>ملاحظة للميتنج</span>
+                </button>
+
+              </div>
+
+              <!-- Note input box (Hidden by default unless has value) -->
+              <div id="note-box-${item.id}" class="${savedNotes ? '' : 'hidden'} mt-2.5">
+                <textarea 
+                  oninput="updateItemNotes('${item.id}', this.value)"
+                  placeholder="اكتب ملاحظة أو تعديل مطلوب لمناقشته مع الـ CEO..." 
+                  class="w-full text-xs p-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-brand-500 bg-slate-50"
+                  rows="2"
+                >${savedNotes}</textarea>
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render Penalties Matrix
+    function renderPenalties() {
+      const container = document.getElementById('penaltiesContainer');
+      if (!container) return;
+
+      container.innerHTML = penaltiesData.map((cat, cIdx) => `
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm print-break-inside">
+          
+          <!-- Category Header -->
+          <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-xl bg-slate-200 text-slate-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${cat.icon}"></path>
+                </svg>
+              </div>
+              <h3 class="text-base font-black text-slate-900">${cat.category}</h3>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+              ${cat.items.length} بنود مدرجة
+            </span>
+          </div>
+
+          <!-- Items Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-right border-collapse">
+              <thead>
+                <tr class="bg-slate-50/50 text-slate-500 text-[11px] font-bold border-b border-slate-200">
+                  <th class="py-3 px-4 w-1/4">المخالفة / السلوك</th>
+                  <th class="py-3 px-4 w-1/5 text-amber-700">المرة الأولى (تدرج)</th>
+                  <th class="py-3 px-4 w-1/5 text-orange-700">المرة الثانية</th>
+                  <th class="py-3 px-4 w-1/5 text-rose-700">التكرار (الحد الأقصى)</th>
+                  <th class="py-3 px-4 text-slate-500">الضابط الإداري</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-xs text-slate-700">
+                ${cat.items.map(item => `
+                  <tr class="hover:bg-slate-50/70 transition">
+                    <td class="py-3.5 px-4 font-bold text-slate-900 leading-relaxed">
+                      ${item.violation}
+                    </td>
+                    <td class="py-3.5 px-4 text-slate-600 bg-amber-50/20 font-medium">
+                      <div class="inline-flex items-center gap-1 text-[11px] text-amber-800 font-semibold mb-0.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                        المستوى 1
+                      </div>
+                      <p>${item.firstTime}</p>
+                    </td>
+                    <td class="py-3.5 px-4 text-slate-600 bg-orange-50/20 font-medium">
+                      <div class="inline-flex items-center gap-1 text-[11px] text-orange-800 font-semibold mb-0.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                        المستوى 2
+                      </div>
+                      <p>${item.secondTime}</p>
+                    </td>
+                    <td class="py-3.5 px-4 text-rose-900 bg-rose-50/30 font-bold">
+                      <div class="inline-flex items-center gap-1 text-[11px] text-rose-700 font-bold mb-0.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                        مخالفة متكررة
+                      </div>
+                      <p>${item.repeated}</p>
+                    </td>
+                    <td class="py-3.5 px-4 text-slate-500 text-[11px]">
+                      ${item.notes}
+                    </td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      `).join('');
+    }
+
+    // Render Bonuses Matrix
+    function renderBonuses() {
+      const container = document.getElementById('bonusContainer');
+      if (!container) return;
+
+      container.innerHTML = bonusesData.map(bonus => `
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between print-break-inside">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold border ${bonus.badgeColor}">
+                ${bonus.badge}
+              </span>
+              <span class="text-xs font-bold text-slate-400">برنامج معتمد</span>
+            </div>
+
+            <h3 class="text-base font-extrabold text-slate-900 mb-2 leading-snug">${bonus.title}</h3>
+            <p class="text-xs text-slate-600 mb-4 leading-relaxed">${bonus.summary}</p>
+
+            <div class="space-y-3 text-xs bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+              <div>
+                <span class="font-bold text-slate-800 block mb-0.5">معيار الاستحقاق (Target):</span>
+                <span class="text-slate-600">${bonus.target}</span>
+              </div>
+
+              <div>
+                <span class="font-bold text-emerald-800 block mb-0.5">العائد والمكافأة المقترحة:</span>
+                <span class="text-emerald-700 font-semibold">${bonus.reward}</span>
+              </div>
+
+              <div>
+                <span class="font-bold text-slate-800 block mb-0.5">أداة القياس والتوثيق:</span>
+                <span class="text-slate-500">${bonus.metric}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400 italic">
+            💡 ${bonus.notes}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter by Category
+    function filterCategory(cat) {
+      document.querySelectorAll('.cat-pill').forEach(pill => {
+        if (pill.getAttribute('data-category') === cat) {
+          pill.className = 'cat-pill active-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white shadow-sm';
+        } else {
+          pill.className = 'cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100';
+        }
+      });
+
+      if (cat === 'all') {
+        renderPlaybook(playbookData);
+      } else {
+        const filtered = playbookData.filter(i => i.category === cat);
+        renderPlaybook(filtered);
+      }
+    }
+
+    // Search Feature
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      if (!q) {
+        renderPlaybook(playbookData);
+        return;
+      }
+      const results = playbookData.filter(item => 
+        item.title.toLowerCase().includes(q) ||
+        item.originalQuery.toLowerCase().includes(q) ||
+        item.actionSteps.some(step => step.toLowerCase().includes(q)) ||
+        item.goldenTip.toLowerCase().includes(q)
+      );
+      renderPlaybook(results);
+    }
+
+    // Toggle Review Note Box
+    function toggleNoteBox(id) {
+      const box = document.getElementById(`note-box-${id}`);
+      if (box) box.classList.toggle('hidden');
+    }
+
+    // Update Status in local review state
+    function updateItemStatus(id, newStatus) {
+      if (!userReviewState[id]) userReviewState[id] = {};
+      userReviewState[id].status = newStatus;
+      
+      const badge = document.getElementById(`status-badge-${id}`);
+      if (badge) {
+        badge.innerHTML = {
+          approved: '<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">معتمد للنقاش</span>',
+          needs_edit: '<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200">يحتاج تعديل صيغة</span>',
+          discuss_ceo: '<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200">نقطة نقاش مع الـ CEO</span>'
+        }[newStatus];
+      }
+      showToast('تم تحديث حالة البند بنجاح');
+    }
+
+    // Update Notes
+    function updateItemNotes(id, text) {
+      if (!userReviewState[id]) userReviewState[id] = {};
+      userReviewState[id].notes = text;
+    }
+
+    // Executive Memo Modal open/close
+    function openExecutiveSummaryModal() {
+      document.getElementById('memoModal').classList.remove('hidden');
+    }
+
+    function closeExecutiveSummaryModal() {
+      document.getElementById('memoModal').classList.add('hidden');
+    }
+
+    // Toast helper
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMessage');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.classList.remove('translate-y-20', 'opacity-0');
+        setTimeout(() => {
+          toast.classList.add('translate-y-20', 'opacity-0');
+        }, 2200);
+      }
+    }
+
+    // Copy memo content
+    function copyExecutiveMemo() {
+      const memoText = `مذكرة عرض سياسات المهندسين على الـ CEO:
+1. اعتماد دليل التعامل والمواقف التشغيلية (Playbook) كمرجع تدريبي رسمي عند تعيين أي مهندس جديد.
+2. تفعيل مبدأ التدرج في لائحة الجزاءات (تنبيه -> إنذار رسمي -> خصم مالي) وتثبيت نسبة خصم نسيان التسجيل (Recording).
+3. إقرار مهلة الـ 6 ساعات كحد أدنى للاعتذارات الطارئة لضمان توفير بديل دون إلغاء الحصص.
+4. إطلاق منظومة الحوافز (بونص تجديد الاشتراكات Retention، حافز تقييمات أولياء الأمور، وبونص الالتزام التام بدون أخطاء).`;
+
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = memoText;
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      try {
+        document.execCommand('copy');
+        showToast('تم نسخ نص المذكرة إلى الحافظة');
+      } catch (err) {
+        showToast('تعذر النسخ التلقائي');
+      }
+      document.body.removeChild(tempTextArea);
+    }
+
+    // Initial load
+    window.onload = function() {
+      renderPlaybook(playbookData);
+      renderPenalties();
+      renderBonuses();
+    };
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 mt-12 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>
+        <p class="font-bold text-slate-700">الأكاديمية - دليل السياسات والتطوير المؤسسي</p>
+        <p>تم إعداد هذه الوثيقة لمراجعة وتثبيت معايير الجودة والعمليات التعليمية مع الإدارة التنفيذية.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-brand-600 font-semibold flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+          </svg>
+          العودة للأعلى
+        </button>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
