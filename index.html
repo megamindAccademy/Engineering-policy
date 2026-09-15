@@ -159,7 +159,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
             </svg>
             <span>الجزء 2: لائحة الجزاءات والخصومات</span>
-            <span class="ml-1.5 py-0.5 px-2 text-xs rounded-full bg-rose-100 text-rose-800 font-bold">3 فئات معتمدة</span>
+            <span class="ml-1.5 py-0.5 px-2 text-xs rounded-full bg-rose-100 text-rose-800 font-bold">4 فئات معتمدة</span>
           </button>
 
           <button onclick="switchTab('bonuses')" id="tab-btn-bonuses" class="tab-btn inline-flex items-center gap-2 py-3 px-5 border-b-2 font-bold text-sm rounded-t-xl transition-all border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-100">
@@ -679,6 +679,20 @@
             secondTime: 'تحقيق إداري في الشكوى الثانية وتنبيه رسمي',
             repeated: 'سحب الجروب فورياً من المهندس وتحويله لمهندس آخر عند تجاوز شكايتين',
             notes: 'تكرار الشكاوى لنفس الجروب يهدد رضا أولياء الأمور وتجديد الاشتراكات ويستوجب سحب المجموعة.'
+          }
+        ]
+      },
+      {
+        category: 'سياسة تكرار الأخطاء، وضع المهندس على الهولد (Hold)، والمنطقة الحمراء (Red Zone)',
+        icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z',
+        color: 'purple',
+        items: [
+          {
+            violation: 'تكرار الأخطاء والملاحظات التشغيلية بعد التوجيه (مشاكل الريكورد، عدم فتح الكاميرا، عدم تبسيط المعلومة، عدم وضوح النطق أو الأكسنت، الفيدباك السلبي من ولي الأمر، كثرة الإلغاءات والتأجيلات، أو التصرف المنفرد دون الرجوع للـ Customer Care)',
+            firstTime: 'وضع المهندس فوراً على حالة الهولد (Hold Status) مع منحه مهلة أسبوعين لتعديل وتدارك الأخطاء',
+            secondTime: 'نقل المهندس إلى المنطقة الحمراء (Red Zone) في حال عدم تعديل الأخطاء خلال مهلة الأسبوعين',
+            repeated: 'إنهاء التعامل الفوري وخروج المهندس من الأكاديمية عند عدم التعديل والاستجابة في المنطقة الحمراء',
+            notes: 'نظام الهولد والـ Red Zone هو نظام مدرج لمنح المهندس فرصة أسبوعين لتعديل الأداء قبل اتخاذ قرار إنهاء التعاقد.'
           }
         ]
       }
