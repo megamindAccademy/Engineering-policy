@@ -459,6 +459,10 @@
           'التنسيق مع خدمة العملاء لترتيب جلسة تعويضية (Catch-up Session) فردية للطالب إذا كانت الفجوة التعليمية كبيرة.'
         ],
         goldenTip: 'الإبلاغ المبكر لخدمة العملاء عند غياب الطالب لأكثر من حصة متتالية يحمي الأكاديمية والمهندس، ويضمن الاحتواء السريع لولي الأمر قبل تفاقم المشكلة.',
+        systemConfirmation: {
+          title: '🔵 موقف السيستم والبروتوكول الحالي (نفس الكلام والضوابط بدون تغيير):',
+          description: 'لا يوجد أي تغيير أو تحديث خاص بالسيستم الجديد بخصوص هذه النقطة، حيث يظل البروتوكول الحالي ثابتاً كما هو بدون تعديل. يلتزم المهندس بخطوات الترحيب والاحتواء والتوجيه، ويمكن للمهندس بالطبع إضافة ملاحظاته وتدوين تعليقاته (<code class="bg-emerald-100 text-emerald-900 px-1.5 py-0.5 rounded font-bold border border-emerald-200">Comments / Notes</code>) على الجلسة في السيستم للمتابعة مع رعاية العملاء.'
+        },
         status: 'approved',
         notes: ''
       },
@@ -867,6 +871,17 @@
                   <div class="space-y-1">
                     <strong class="font-black text-blue-900 block text-xs tracking-tight">${item.systemUpdate.title}</strong>
                     <p class="text-xs text-blue-950 leading-relaxed font-semibold">${item.systemUpdate.description}</p>
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- Green Callout Box for System Confirmation (e.g. Unchanged Protocol for pb-5) -->
+              ${item.systemConfirmation ? `
+                <div class="bg-emerald-50/90 border-2 border-emerald-600 rounded-xl p-3.5 mb-4 text-xs text-emerald-950 flex items-start gap-2.5 shadow-xs">
+                  <span class="text-xl flex-shrink-0 mt-0.5">🔵</span>
+                  <div class="space-y-1">
+                    <strong class="font-black text-emerald-900 block text-xs tracking-tight">${item.systemConfirmation.title}</strong>
+                    <p class="text-xs text-emerald-950 leading-relaxed font-semibold">${item.systemConfirmation.description}</p>
                   </div>
                 </div>
               ` : ''}
