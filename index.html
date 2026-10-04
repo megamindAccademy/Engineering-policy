@@ -372,6 +372,10 @@
           'لا تقم بإلغاء السيشن من تلقاء نفسك نهائياً إلا بعد توثيق الخطوات السابقة وإخطار الإدارة.'
         ],
         goldenTip: 'توثيق الـ Screenshot يحميك من أي ادعاء بأنك لم تتواجد في موعد الحصة.',
+        systemIssue: {
+          title: '🚨 تنبيه هام وإشكالية تشغيلية على السيستم الجديد (New System Session Issue - للنقاش مع م. أحمد CEO):',
+          description: 'في الوضع الطبيعي على السيستم الجديد، يلتزم المهندس بالضغط على زر البدء (<code class="bg-red-100 text-red-900 px-1.5 py-0.5 rounded font-bold border border-red-200">Start Session</code>) في موعد الحصة. عند غياب جميع الطلاب وانقضاء الـ 20 دقيقة دون حضور أحد، تظهر إشكالية تشغيلية في حالة الجلسة على السيستم الجديد (<code class="bg-red-100 text-red-900 px-1.5 py-0.5 rounded font-bold border border-red-200">Session Status Issue</code>)، ونحتاج لاتخاذ إجراء حاسم وقرار أخير (<code class="bg-red-100 text-red-900 px-1.5 py-0.5 rounded font-bold border border-red-200">Take Action</code>) بالتنسيق والمناقشة مع الباشمهندس أحمد (CEO): هل يتم التواصل والرجوع لفريق خدمة العملاء والرعاية (<code class="bg-red-100 text-red-900 px-1.5 py-0.5 rounded font-bold border border-red-200">Customer Care</code>) لتجعل الجلسة معادة الجدولة (<code class="bg-red-100 text-red-900 px-1.5 py-0.5 rounded font-bold border border-red-200">Reschedule / Schedule ثاني</code>)، أم هناك إجراء تشغيلي وإداري آخر سيتخذ لإغلاق السيشن على السيستم؟'
+        },
         status: 'approved',
         notes: ''
       },
@@ -831,6 +835,17 @@
                   `).join('')}
                 </ul>
               </div>
+
+              <!-- Red Callout Box for System Issue (Attention & CEO Action Item) -->
+              ${item.systemIssue ? `
+                <div class="bg-red-50/90 border-2 border-red-500 rounded-xl p-3.5 mb-4 text-xs text-red-950 flex items-start gap-2.5 shadow-xs">
+                  <span class="text-xl flex-shrink-0 mt-0.5">🚨</span>
+                  <div class="space-y-1">
+                    <strong class="font-black text-red-900 block text-xs tracking-tight">${item.systemIssue.title}</strong>
+                    <p class="text-xs text-red-950 leading-relaxed font-semibold">${item.systemIssue.description}</p>
+                  </div>
+                </div>
+              ` : ''}
 
               <!-- Golden Tip -->
               <div class="bg-emerald-50/80 border border-emerald-200/70 rounded-xl p-3 mb-4 text-xs text-emerald-900 flex items-start gap-2">
