@@ -151,7 +151,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
             </svg>
             <span>الجزء 1: دليل المواقف التشغيلية (Playbook)</span>
-            <span id="badge-playbook-count" class="ml-1.5 py-0.5 px-2 text-xs rounded-full bg-brand-100 text-brand-800 font-bold">17</span>
+            <span id="badge-playbook-count" class="ml-1.5 py-0.5 px-2 text-xs rounded-full bg-brand-100 text-brand-800 font-bold">16</span>
           </button>
 
           <button onclick="switchTab('penalties')" id="tab-btn-penalties" class="tab-btn inline-flex items-center gap-2 py-3 px-5 border-b-2 font-bold text-sm rounded-t-xl transition-all border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-100">
@@ -197,7 +197,7 @@
       <!-- Subcategory filters -->
       <div class="flex flex-wrap items-center gap-2 no-print">
         <span class="text-xs font-bold text-slate-500 ml-2">تصفية حسب التصنيف:</span>
-        <button onclick="filterCategory('all')" class="cat-pill active-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white shadow-sm" data-category="all">الكل (17)</button>
+        <button onclick="filterCategory('all')" class="cat-pill active-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white shadow-sm" data-category="all">الكل (16)</button>
         <button onclick="filterCategory('tech')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100" data-category="tech">مشكلات تيمز والتقنية للمهندسين</button>
         <button onclick="filterCategory('customer_service')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100" data-category="customer_service">إجراءات خدمة العملاء والحضور والغياب</button>
         <button onclick="filterCategory('classroom')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100" data-category="classroom">إدارة الفصل والتعامل التربوي وأولياء الأمور</button>
@@ -698,27 +698,6 @@
         systemIssue: {
           title: '🚨 ضوابط التعامل مع تأخير الطالب الكبير ونظام المستمع (Late Arrival & Listener Policy):',
           description: 'عند تأخر الطالب لفترة كبيرة (مثل ثلث ساعة إلى نصف ساعة أو أكثر)، يُلزم المهندس بالتأكد من إبلاغ ولي الأمر مسبقاً عبر رسالة توضيحية على الجروب الرسمي منذ بداية الكورس بأن التأخر لأكثر من 20 دقيقة يستوجب دخول الطالب <strong>كمستمع فقط (<code class="bg-red-100 text-red-900 px-1.5 py-0.5 rounded font-bold border border-red-200">Listener Mode</code>)</strong> حتى يفهم ولي الأمر الإجراء. <strong>تحذير صارم:</strong> يُمنع منعاً باتاً بالنسبة للمهندس حظر أو منع الطالب من دخول السيشن بأي شكل من الأشكال؛ فالطالب يدخل حتماً كمستمع. <br><br><strong>استثناء ومرونة المهندس:</strong> إذا دخل الطالب بعد نصف ساعة مثلاً ولكن لم يكن الشرح الجاد والمكثف قد بدأ بعد (بسبب الاستغراق في الـ Recap والمراجعة)، فلا مانع نهائياً من سماح المهندس للطالب بالمشاركة أو الشرح السريع لما فاته، بشرط ألا يصبح هذا هو المعتاد حتى لا يتكرر التأخير، مع تنبيه الطالب وتوجيهه بلباقة ولطف دون إزعاجه أو التأثير على نفسيته.'
-        },
-        status: 'approved',
-        notes: ''
-      },
-      {
-        id: 'pb-17',
-        title: 'جدولة وتكليف المحاضرين (Instructors) بتوليد اختبارات المناهج بصيغة Forms لتنفيذها على موقع الطلاب',
-        originalQuery: 'كيف يتم جدولة وإسناد مهام إنشاء وتوليد التقييمات والاختبارات الإلكترونية (Forms) للمحاضرين لبدء تفعيلها على منصة وموقع الطلاب؟',
-        category: 'classroom',
-        categoryLabel: 'إدارة المناهج والمهام المهنية',
-        urgency: 'عالي',
-        actionSteps: [
-          'جدولة وإسناد المهام (Instructors Task Assignment): إسناد وتوزيع المهام وتحديد جداول زمنية واضحة لكل محاضر (Instructor) بتوليد وإعداد التقييمات واختبارات المناهج الخاصة بالدورة.',
-          'توليد الاختبارات بصيغة Forms تفاعلية (Quiz & Form Generation): يقوم كل محاضر بتصميم وتوليد نماذج اختبارات إلكترونية تفاعلية (Forms) تضمن قياس استيعاب المفاهيم والمقتضيات العملية للدرس، وتراعي التدرج في مستويات الطلاب.',
-          'المراجعة والاعتماد الفني: مراجعة نماذج الاختبارات قبل النشر من قِبل مسؤول الخدمة التعليمية للتأكد من خلوها من الأخطاء ومناسبتها للمستهدف التعليمي.',
-          'الرفع والتنفيذ على موقع الطلاب (Student Portal Deployment): رفع وتطبيق الاختبارات عبر Forms وتضمينها رسمياً داخل موقع وحسابات الطلاب لبدء تنفيذها وتقييم الطلاب بشكل دوري ومباشر.'
-        ],
-        goldenTip: 'التحديث والدقة في توليد النماذج التفاعلية (Forms) يضمنان تقييم مستوى استيعاب الطلاب بدقة ويثريان تجربة التعلم على المنصة الإلكترونية.',
-        systemUpdate: {
-          title: '🔄 نظام جدولة وتوليد اختبارات المناهج الإلكترونية (Student Portal Forms Directive):',
-          description: 'تم رسمياً إقرار وتفعيل بنود جدولة المهام والتكليفات التعليمية للمحاضرين (<code class="bg-blue-100 text-blue-900 px-1.5 py-0.5 rounded font-bold border border-blue-200">Instructors Tasks</code>) الخاصة بإعداد وتوليد بنوك الاختبارات الإلكترونية في صيغة نماذج تفاعلية (<code class="bg-blue-100 text-blue-900 px-1.5 py-0.5 rounded font-bold border border-blue-200">Interactive Forms</code>). ويُلتزم بالمدد الزمنية المحددة للجدولة لرفع وتفعيل الاختبارات مباشرة على موقع ومنصة الطلاب (<code class="bg-blue-100 text-blue-900 px-1.5 py-0.5 rounded font-bold border border-blue-200">Student Portal</code>) لبدء التنفيذ والقياس التلقائي المباشر.'
         },
         status: 'approved',
         notes: ''
